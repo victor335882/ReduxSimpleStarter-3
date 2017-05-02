@@ -6,20 +6,13 @@ export default class SearchBar extends Component{
     this.state = {term: ''};
     this.onInputChange = this.onInputChange.bind(this);
   }
+  
   onInputChange(event){
     this.setState({term:event.target.value});
   }
 
-  {
-    //the <form> tag in html will let browser automatically
-    //sent the get and post request to server
-    //when you press the submit button
-    //and reset the value in input
-    //so we add this function to tell browser not to do this thing
-  }
   onFormSubmit(event){
     event.preventDefault();
-    // we need to go and fetch wether data
   }
   render() {
     return(
