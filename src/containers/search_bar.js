@@ -8,9 +8,6 @@ class SearchBar extends Component{
     super(props);
     this.state = {term: ''};
     this.onInputChange = this.onInputChange.bind(this);
-
-    //to make sure we will read correct props when submit
-    //we bind the this of onFormSubmit to the this of constructor
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
@@ -20,9 +17,7 @@ class SearchBar extends Component{
 
   onFormSubmit(event){
     event.preventDefault();
-    //when user press submit button, it will return the term to fetchWeather
     this.props.fetchWeather(this.state.term);
-    // And then reset the term to default value
     this.setState({term:''});
   }
   render() {
