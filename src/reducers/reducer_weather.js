@@ -4,6 +4,5 @@
 //the action is the value returned by ../action/index.js
 export default function(state = null, action) {
 
-  console.log('Action received', action);
   return state;
 }
