@@ -3,10 +3,7 @@ import {connect} from 'react-redux';
 import Chart from '../components/chart';
 
 class WeatherList extends Component {
-  //add a function to retrive data of state,payload
-  //from Ajax request after start the action
-  //and this function is used to present a single city, a single row
-  renderWeather(cityData) {
+    renderWeather(cityData) {
     const name = cityData.city.name;
     const temps = cityData.list.map(weather => weather.main.temp);
 
@@ -14,7 +11,6 @@ class WeatherList extends Component {
       <tr key={name}>
         <td>{name}</td>
         <td>
-          //use a separate reuseful functional component
           <Chart data={temps} color="orange" />
         </td>
       </tr>
@@ -39,10 +35,6 @@ class WeatherList extends Component {
   }
 }
 
-//function mapStateToProps(state) {
-//  return {weather:state.weather};
-//}
-//write in es6 syntex
 function mapStateToProps({weather}) {
   return {weather}
 }
