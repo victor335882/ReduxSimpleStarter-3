@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 //add a third party api witch we already add in index.html
 class GoogleMap extends Component {
   componentDidMount() {
-    new google.map.Map(this.refs.map, {
+    new google.maps.Map(this.refs.map, {
       zoom:12,
       center: {
         lat:this.props.lat,
